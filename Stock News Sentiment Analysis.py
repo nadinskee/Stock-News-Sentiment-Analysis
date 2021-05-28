@@ -5,7 +5,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 finviz_url = 'https://finviz.com/quote.ashx?t='
-tickers = ['AMZN', 'AMD', 'FB']
+tickers = input("Enter a valid ticker. For multiple tickers separate by commas (ex. AAPL, MSFT)").replace(" ", "")
+tickers = tickers.split(",")
 
 news_tables = {}
 for ticker in tickers:
